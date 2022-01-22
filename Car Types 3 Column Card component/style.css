@@ -1,0 +1,118 @@
+@font-face {
+    font-family: AgencyFB;
+    src: url(agencyFB.ttf);
+}
+
+body, #card, .col{
+    display: flex
+}
+body{
+    justify-content: center;
+    align-items: center;
+    color: rgb(207, 207, 207);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';  
+    height: 100vh;
+    margin: 0
+}
+
+/* --- body->#card ---*/
+#card{
+    border-radius: 0.6em;
+    overflow: hidden;
+    height: 28.5em;
+    min-width: 50em;
+    max-width: 70%
+}
+
+/* --- #card->.col ---*/
+.col{
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1em;
+    width: 13em;
+    padding: 3em
+}
+#col1{
+    background: #e28525
+}
+#col2{
+    background: #016972
+}
+#col3{
+    background: #00403f
+}
+
+/* --- .col->.title ---*/
+.title{
+    font-family: AgencyFB;
+    color: white
+}
+
+/* --- .col->.button ---*/
+.button{
+    border-radius: 2em;
+    padding: 0.7em 1.7em;
+    text-align: center;
+    background: white;
+    margin-top: 3em
+}
+
+#col1 .button{
+    color: #e28525
+}
+#col2 .button{
+    color: #016972
+}
+#col3 .button{
+    color: #00403f
+}
+
+/*START*/
+/*HOVER ON LEARN_MORE button*/
+#col1 .button:hover{
+    cursor: pointer;
+    padding: 0.6em 1.6em;
+    border: 0.1em solid white;
+    color: white;
+    background: #e28525
+}
+#col2 .button:hover{
+    cursor: pointer;
+    padding: 0.6em 1.6em;
+    border: 0.1em solid white;
+    color: white;
+    background: #016972
+}
+#col3 .button:hover{
+    cursor: pointer;
+    padding: 0.6em 1.6em;
+    border: 0.1em solid white;
+    color: white;
+    background: #00403f
+}
+/*HOVER ON LEARN_MORE button*/
+/*END*/
+
+
+/*START*/
+/*MOBILE VIEW*/
+@media (max-width:50em) {
+    body{
+        height: auto;
+        padding: 2em
+    }
+    #card{
+        flex-flow: column;
+        min-width: fit-content;
+        height: auto
+    }
+    .col{
+        gap: 1em
+    }
+    .button{
+        margin-top: 1em
+    }
+}
+/*MOBILE VIEW*/
+/*END*/

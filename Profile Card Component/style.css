@@ -1,0 +1,102 @@
+/*START*/
+/*IMPORTING FONTS*/
+@font-face {
+    font-family: "M-Medium";
+    src: url("Montserrat/static/Montserrat-Medium.ttf")
+}
+@font-face {
+    font-family: "M-Bold";
+    src: url("Montserrat/static/Montserrat-Bold.ttf")
+}
+/*IMPORTING FONTS*/
+/*END*/
+
+body, #card, #content, #social, .stat{
+    display: flex
+}
+#card, #content, .stat{
+    flex-flow: column
+}
+body{
+    background-color: #19a1ad;
+
+    /*using multiple backgrounds*/
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -10vw -50vh, 50vw 50vh;
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: M-Bold;
+    color: #383a48;
+    margin: 0
+}
+
+/*--- [body -> #card] ---*/
+#card{
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 23.5rem;
+    background-color: white;
+    box-shadow: 0 1rem 3rem 0.1rem #257780
+}
+
+/*--- body -> [#card -> #banner] ---*/
+#banner, #content {
+    width: 100%
+}
+
+/*--- body -> [#card -> #content] ---*/
+#content{
+    position: relative;
+    top: -3.5rem;  
+    align-items: center;
+    gap: 1rem
+}
+
+/*--- body -> #card -> [#content -> #avatar] ---*/
+#avatar{
+    width: 28%;
+    border-radius: 50%;
+    border: white solid .4rem
+}
+
+/*--- body -> #card -> [#content -> #location] ---*/
+#location{
+    margin-top: -0.5rem
+}
+
+/* separator */
+hr{
+    border: solid #eeeeee 0.1px;
+    width: 100%
+}
+
+/*--- body -> #card -> [#content -> #social] ---*/
+#social{
+    width: 100%;
+    justify-content: center;
+    gap: 2.5rem
+}
+
+/*--- body -> #card -> #content -> [#social -> .stat] ---*/
+.stat{
+    align-items: center;
+    gap: 0.4rem
+}
+
+/*--- body -> #card -> #content -> [#bio -> #age] ---*/
+/*--- body -> #card -> #content -> [#social -> .type] ---*/
+#age, .type, #location{
+    font-family: M-Medium;
+    font-size: 0.8rem;
+    color: #88878c
+}
+
+/*--- body -> #card -> #content -> [#bio -> #name] ---*/
+/*--- body -> #card -> #content -> [#social -> .count] ---*/
+#name, #age, .count{
+    font-size: 1.1rem
+}
+

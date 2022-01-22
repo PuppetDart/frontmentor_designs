@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "M-Medium";
+    src: url("Montserrat/static/Montserrat-Medium.ttf");
+}
+@font-face {
+    font-family: "M-Bold";
+    src: url("Montserrat/static/Montserrat-Bold.ttf");
+}
+@font-face {
+    font-family: "M-Regular";
+    src: url("Montserrat/static/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "M-Light";
+    src: url("Montserrat/static/Montserrat-Light.ttf");
+}
+body{            
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e0e8ff;
+    font-family: "M-Medium";
+    height: 100vh;
+    color: #1b2948;
+    margin: 0
+}
+body, #card, #selected_plan, #plan_info, #content{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+#card{
+    justify-content: start;
+    flex-flow: column;
+    background: white;
+    border-radius: 1rem;
+    height: min-content;
+    overflow: hidden;
+    box-shadow: 0 1em 1em 0 #c4d0f6;
+}
+#banner{
+    width: 100%;
+}
+#content{
+    padding: 2em;
+    flex-flow: column;
+    text-align: center;
+    gap: 1.4em;
+}
+h1{
+    font-family: "M-Bold";
+    margin-top: 0;
+}
+#desc{
+    line-height: 1.7em;
+    margin-top: -1.5em;
+}
+#selected_plan{
+    padding: 1em;
+    border-radius: 1em;
+    background: #f8f9fe;
+    justify-content: space-between;
+    width: 20em
+}
+#plan_info{
+    flex-flow: column;
+    margin-left: -4em;
+    align-items: start;
+}
+a{
+    color: #382ae1;
+}
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: #766cf1;
+}
+span:first-child, #pay_button, #cancel_button, a{
+    font-family: "M-Bold";
+}
+#pay_button{
+    background: #382ae1;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 1em 1em 0em #d8d5fc;
+    width: 20em;
+    color: white
+}
+#pay_button:hover{
+    background: #766cf1;
+    cursor: pointer;
+}
+#cancel_button:hover{
+    color: #1b2948;
+    cursor: pointer;
+}
+#cancel_button, span:nth-child(2), #desc{
+    color: #797e9a;
+}
+
+@media (min-width: 45em) {
+    body{
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+    #card{
+        max-width: fit-content;
+    }
+    #desc{
+        max-width: 20rem;
+    }
+}
+@media (max-width: 45em) {
+    body{
+        background-image: url("images/pattern-background-mobile.svg");
+    }
+    #card{
+        max-width: 25rem;
+    }
+    #desc{
+        max-width: 19em;
+    }
+}
