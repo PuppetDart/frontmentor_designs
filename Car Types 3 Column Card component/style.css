@@ -1,6 +1,6 @@
 @font-face {
     font-family: AgencyFB;
-    src: url(agencyFB.ttf);
+    src: url(agencyFB.ttf)
 }
 
 body, #card, .col{
@@ -9,27 +9,31 @@ body, #card, .col{
 body{
     justify-content: center;
     align-items: center;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
     color: rgb(207, 207, 207);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';  
+
     height: 100vh;
     margin: 0
 }
 
-/* --- body->#card ---*/
+/* [body->#card] */
 #card{
-    border-radius: 0.6em;
     overflow: hidden;
+
+    border-radius: 0.6em;
     height: 28.5em;
     min-width: 50em;
-    max-width: 70%
+    max-width: 70%;
 }
 
-/* --- #card->.col ---*/
+/* [#card->.col, .title, .button] */
 .col{
     flex-flow: column;
     justify-content: start;
     align-items: start;
     gap: 1em;
+
     width: 13em;
     padding: 3em
 }
@@ -43,19 +47,19 @@ body{
     background: #00403f
 }
 
-/* --- .col->.title ---*/
 .title{
     font-family: AgencyFB;
     color: white
 }
 
-/* --- .col->.button ---*/
-.button{
+.button{    
+    background: white;
+
     border-radius: 2em;
     padding: 0.7em 1.7em;
-    text-align: center;
-    background: white;
-    margin-top: 3em
+    margin-top: 3em;
+    
+    text-align: center
 }
 
 #col1 .button{
@@ -99,13 +103,13 @@ body{
 /*MOBILE VIEW*/
 @media (max-width:50em) {
     body{
-        height: auto;
+        height: fit-content;
         padding: 2em
     }
     #card{
         flex-flow: column;
         min-width: fit-content;
-        height: auto
+        height: fit-content
     }
     .col{
         gap: 1em

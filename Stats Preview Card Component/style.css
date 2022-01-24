@@ -2,94 +2,106 @@ body, #card, #content, #stats{
     display: flex;
 }
 body{
-    background: #0a0c1b;
     justify-content: center;
     align-items: center;
+
+    background: #0a0c1b;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
+
     height: 100vh;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #card{
-    border-radius: 0.5em;
     overflow: hidden;
+    border-radius: 0.5em;
+
     height: 25rem;
+
+    transition: ease all 0.2s;
 }
 #content{
     flex: 2;
-    min-width: 1rem;
     flex-flow: column;
     align-items: start;
     justify-content: space-between;
+    gap: 1em;
+
     background: #1c1938;
+
     min-height: min-content;
-    padding: 3em;
+    min-width: 1rem;
+    padding: 3em
 }
 h1{
-    margin: 0;
+    font-size: 30px;
+    line-height: 28px;
+    margin: 0
 }
 h1>span{
-    color: #aa5ad9;
+    color: #aa5ad9
 }
 #desc{
-    flex: 1
+    flex: 1;
+    margin-bottom: 1em;
 }
 div> span{
-    color: #78768e;
+    color: #78768e
 }
 #stats{
     justify-content: start;
     gap: 2em
 }
 h2{
-    margin: 0;
+    margin: 0
 }
 #banner{
     flex: 3;
+
     height: 100%;
+
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(images/image-header-desktop.jpg);
+    background-image: url(images/image-header-desktop.jpg)
 }
-    #over_layer{
-        height: 100%;
-        width: 100%;
-        background: #8110c767;
-        z-index: 2;
-    }
+#over_layer{
+    height: 100%;
+    width: 100%;
 
-@media (max-width: 70rem) {
+    background: #8110c767;
+
+    z-index: 2;
+}
+
+@media (max-width: 60rem) {
     body{
-        text-align: center;
+        text-align: center
     }
     #card{
         flex-flow: column-reverse;
+
         min-height: 40rem;
         height: 85%;
-        width: 80%;
-        max-width: 25rem;
+        max-width: 19rem;
+        width: 80%
     }
     #content{
         align-items: center;
-        padding: 2em;
         gap: 1em;
+
+        padding: 2em
     }
     #stats{
         flex-flow: column;
-        align-items: center;
+        align-items: center
     }
     #stats{
         gap: 1em
     }
     #banner{
         background-image: url(images/image-header-mobile.jpg);
-        
-        z-index: 0;
+        z-index: 0
     }
 
-}
-@media (min-width: 70rem) {
-    #content{
-        gap: 1em
-    }
 }
