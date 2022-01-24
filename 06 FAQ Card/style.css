@@ -109,7 +109,7 @@ hr{
     border: solid hsl(240, 5%, 91%) 0.01px
 }
 
-@media (max-width: 52rem) {
+@media (max-width: 375px) {
     body, #card{
         flex-flow: column
     }

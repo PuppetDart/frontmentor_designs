@@ -28,3 +28,9 @@ a{
     font-family: M;
     color: white;
 }
+
+@media (orientation:vertical) {
+    body{
+        font-size: 90px;
+    }
+}
