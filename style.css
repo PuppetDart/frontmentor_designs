@@ -9,28 +9,39 @@ body, #card{
     margin: 0;
 }
 body{
-    background: linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
+    flex-flow: column;
+    gap: 1em;
+
     align-items: center;
+    background: linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
+
+    font-family: M;
+    color: white;
 }
 #card{
     background: hsl(224, 44%, 18%);
-    align-items: flex-start;
     border-radius: 1em;
     padding: 2em;
     width: 30%;
-    min-width: 350px;
     height: fit-content;
     flex-flow: column;
     gap: 2em;
 }
 a{
     text-decoration: none;
-    font-family: M;
-    color: white;
+    color: rgb(197, 197, 197);
+    transition: color 1s;
 }
 
-@media (orientation:vertical) {
+a:hover{
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
     body{
-        font-size: 90px;
+        font-size: 28px;
+    }
+    #card{
+        width: 55%;
     }
 }
