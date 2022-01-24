@@ -1,0 +1,30 @@
+@font-face {
+    font-family: M;
+    src: url("02 Order Summary Component/Montserrat/static/Montserrat-Medium.ttf");
+}
+body, #card{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+body{
+    background: linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
+    align-items: center;
+}
+#card{
+    background: hsl(224, 44%, 18%);
+    align-items: flex-start;
+    border-radius: 1em;
+    padding: 2em;
+    width: 30%;
+    min-width: 350px;
+    height: fit-content;
+    flex-flow: column;
+    gap: 2em;
+}
+a{
+    text-decoration: none;
+    font-family: M;
+    color: white;
+}
