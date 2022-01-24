@@ -1,13 +1,13 @@
 @font-face {
     font-family: Kumbh-Bold;
-    src: url("Kumbh_Sans/static/KumbhSans-Bold.ttf");
+    src: url("Kumbh_Sans/static/KumbhSans-Bold.ttf")
 }
 @font-face {
     font-family: Kumbh-Med;
-    src: url("Kumbh_Sans/static/KumbhSans-Medium.ttf");
+    src: url("Kumbh_Sans/static/KumbhSans-Medium.ttf")
 }
 body, #card, #questions, .question{
-    display: flex;
+    display: flex
 }
 body{
     height: 100vh;
@@ -17,17 +17,22 @@ body{
     font-family: Kumbh-Med;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%))
 }
 #card{
     border-radius: 1.5rem;
-    height: 32rem;
-    width: 59rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 27rem;
+    height: 65%;
+    width: 60%;
+    min-width: 50rem;
     background-color: white;
     background-image: url("images/bg-pattern-desktop.svg"), url("images/illustration-woman-online-desktop.svg");
     background-position: -35.5rem -19rem, -5.2rem 4.7rem;
     background-repeat: no-repeat;
     background-size: contain, fill;
+    transition: ease all .3s
 }
 #illust_box{
     position: relative;
@@ -35,39 +40,77 @@ body{
     left: -6rem;
     height: 12rem;
     z-index: 1;
+    
+    transition: ease-out all 0.3s
 } 
-#questions{
-    justify-content: center;
+#questions{  
     position: relative;
     gap: 0.3rem;
-    left: 18rem;
+    left: 12%;
     width: 21.5rem;
-    flex-flow: column;
+    flex-flow: column
 }
 h1{
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem
 }
 h1, .bold{
     font-family: Kumbh-Bold;
-    color: hsl(237, 12%, 33%);
+    color: hsl(237, 12%, 33%)
 }
 .question{
     justify-content: space-between;
+    cursor: pointer
 }
 .status_arrow{
-    object-fit: contain;
+    object-fit: contain
 }
 .up{
-    transform: scaleY(-1);
+    transform: scaleY(-1)
 }
 .answer{
-    display: none;
-    font-size: 12px;
+    font-size: 0;
+    transition: font-size 0.2s;
 }
 .answer_visible{
-    display: inline-block;
+    font-size: 12px
 }
 hr{
     width: 100%;
-    border: solid hsl(240, 5%, 91%) 0.01px;
+    border: solid hsl(240, 5%, 91%) 0.01px
+}
+
+@media (max-width: 52rem) {
+    body, #card{
+        flex-flow: column
+    }
+    #card{
+        position: relative;
+        justify-content: center;
+        margin-top: 90px;
+        width: fit-content;
+        min-width: 21rem;
+        height: 35rem;
+        min-height: fit-content;
+        background-image: url("images/bg-pattern-mobile.svg");
+        background-position: 3.4rem 0rem;
+        background-size: 16rem
+    }
+    #illust_box{
+        content: url("images/illustration-woman-online-mobile.svg");
+        position: absolute;
+        top: -7rem;
+        left: 3.5rem
+    }
+    #questions{
+        margin-bottom: 10%;
+        padding: 0rem 2rem;
+        position: static;
+        margin-top: 28%;
+        gap: 0.4rem;
+        width: 19rem
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 2rem
+    }
 }

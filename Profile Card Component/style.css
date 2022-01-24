@@ -23,7 +23,7 @@ body{
     /*using multiple backgrounds*/
     background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position: -10vw -50vh, 50vw 50vh;
+        background-position: right 50vw bottom 15vw, 50vw 50vh;
 
     height: 100vh;
     justify-content: center;

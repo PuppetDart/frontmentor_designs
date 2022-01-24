@@ -103,7 +103,7 @@ span:first-child, #pay_button, #cancel_button, a{
         background-image: url("images/pattern-background-desktop.svg");
     }
     #card{
-        max-width: fit-content;
+        max-width: 30rem;
     }
     #desc{
         max-width: 20rem;
