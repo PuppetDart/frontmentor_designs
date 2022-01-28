@@ -1,18 +1,18 @@
 @font-face {
     font-family: "M-Medium";
-    src: url("Montserrat/static/Montserrat-Medium.ttf");
+    src: url("Montserrat/static/Montserrat-Medium.ttf")
 }
 @font-face {
     font-family: "M-Bold";
-    src: url("Montserrat/static/Montserrat-Bold.ttf");
+    src: url("Montserrat/static/Montserrat-Bold.ttf")
 }
 @font-face {
     font-family: "M-Regular";
-    src: url("Montserrat/static/Montserrat-Regular.ttf");
+    src: url("Montserrat/static/Montserrat-Regular.ttf")
 }
 @font-face {
     font-family: "M-Light";
-    src: url("Montserrat/static/Montserrat-Light.ttf");
+    src: url("Montserrat/static/Montserrat-Light.ttf")
 }
 
 body{            
@@ -20,6 +20,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #e0e8ff;
+    background-image: url("images/pattern-background-desktop.svg");
 
     font-family: "M-Medium";
     color: #1b2948;
@@ -32,7 +33,7 @@ body, #card, #selected_plan, #plan_info, #content{
     align-items: center;
     justify-content: center;
 
-    transition: background-image 2s;
+    transition: background-image 2s
 }
 #card{
     flex-flow: column;
@@ -43,12 +44,13 @@ body, #card, #selected_plan, #plan_info, #content{
 
     border-radius: 1rem;
     height: min-content;
+    max-width: 30rem;
     box-shadow: 0 1em 1em 0 #c4d0f6;
 
-    transition: ease-out all 0.2s;
+    transition: ease-out all 0.2s
 }
 #banner{
-    width: 100%;
+    width: 100%
 }
 #content{
     flex-flow: column;
@@ -59,11 +61,13 @@ body, #card, #selected_plan, #plan_info, #content{
 }
 h1{
     font-family: "M-Bold";
+    font-size: 28px;
     margin-top: 0
 }
 #desc{
     line-height: 1.7em;
-    margin-top: -1.5em
+    margin-top: -1.5em;
+    max-width: 20rem
 }
 #selected_plan{
     justify-content: space-between;
@@ -71,31 +75,34 @@ h1{
     background: #f8f9fe;
 
     border-radius: 1em;
+    margin-top: 0.5em;
     padding: 1em;
-    width: 20em
+    max-width: 20em;
+    width: 100%
 }
 #plan_info{
     flex-flow: column;
     align-items: start;
 
-    margin-left: -4em;
+    margin-left: -10%
 }
 a{
-    color: #382ae1;
+    color: #382ae1
 }
 a:hover{
     text-decoration: none;
     cursor: pointer;
-    color: #766cf1;
+    color: #766cf1
 }
 span:first-child, #pay_button, #cancel_button, a{
-    font-family: "M-Bold";
+    font-family: "M-Bold"
 }
 #pay_button{
     background: #382ae1;
     box-shadow: 0 1em 1em 0em #d8d5fc;
     
-    width: 20em;
+    width: 100%;
+    max-width: 20em;
     padding: 1em;
     border-radius: 1em;
 
@@ -113,23 +120,18 @@ span:first-child, #pay_button, #cancel_button, a{
     color: #797e9a
 }
 
-@media (min-width: 45em) {
+@media (max-width: 768px) {
     body{
-        background-image: url("images/pattern-background-desktop.svg")
+        background-image: url("images/pattern-background-mobile.svg");
+        padding: 0 1.2em;
+        font-size: 14.5px
     }
     #card{
-        max-width: 30rem
+        min-width: 19rem;
+        max-width: 23rem
     }
-    #desc{
-        max-width: 20rem
-    }
-}
-@media (max-width: 45em) {
-    body{
-        background-image: url("images/pattern-background-mobile.svg")
-    }
-    #card{
-        max-width: 25rem
+    h1{
+        font-size: 22px
     }
     #desc{
         max-width: 19em

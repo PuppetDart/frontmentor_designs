@@ -6,6 +6,7 @@ body, #card{
     display: flex;
     justify-content: center;
     height: 100vh;
+    padding: 0 2rem;
     margin: 0;
 }
 body{
@@ -22,7 +23,6 @@ body{
     background: hsl(224, 44%, 18%);
     border-radius: 1em;
     padding: 2em;
-    width: 30%;
     height: fit-content;
     flex-flow: column;
     gap: 2em;
@@ -39,9 +39,6 @@ a:hover{
 
 @media (max-width: 768px) {
     body{
-        font-size: 28px;
-    }
-    #card{
-        width: 55%;
+        font-size: 22px;
     }
 }

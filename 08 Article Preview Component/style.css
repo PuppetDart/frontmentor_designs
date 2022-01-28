@@ -1,0 +1,190 @@
+@font-face {
+    font-family: manrope;
+    src: url(Manrope-VariableFont_wght.ttf);
+}
+body, #card, #content, #profile, #indiv, #details, .share_icon, .share_menu, #main{
+    display: flex
+}
+body, #profile, .share_icon, .share_menu, #main{
+    justify-content: center;
+    align-items: center
+}
+body{
+    margin: 0;
+    height: 100vh;
+
+    font-family: manrope;
+
+    background: hsl(210, 46%, 95%)
+}
+#card{
+    min-width: 48rem;
+    width: 50%;
+    height: 18rem;
+
+    border-radius: 0.5rem;
+    background: white;
+}
+#banner{
+    width: 40%;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* --- CONTENT STARTS --- */
+#content{
+    flex-flow: column;    
+    justify-content: space-between;
+
+    padding: 2.3rem 2.5rem;
+}
+h2{
+    margin: 0;
+    color: hsl(217, 19%, 35%);
+    font-size: 20px;
+    
+    letter-spacing: 0.07rem;
+}
+#desc{
+    font-size: 13px;
+    color: hsl(214, 17%, 51%);
+    margin: 0 0 0.5rem;
+}
+
+/* --- PROFILE STARTS --- */
+#profile{
+    justify-content: space-between;
+    
+    height: 2.5rem;
+}
+#avatar{
+    height: 100%;
+    border-radius: 50%
+}
+#indiv{
+    height: 100%;
+    gap: 1rem
+}
+
+/* --- DETAILS STARTS --- */
+#details{
+    flex-flow: column;
+    gap: 0.2rem;
+    
+    font-size: 13px;
+}
+#name{
+    color: hsl(217, 19%, 35%);
+    font-variation-settings: "wght" 700;
+}
+#date{
+    color: hsl(214, 17%, 51%);
+}
+/* --- DETAILS ENDS --- */
+
+/* --- SHARE_ICON STARTS --- */
+.share_icon{
+    position: relative;
+
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    
+    background-color: hsl(210, 46%, 95%);
+    user-select: none;
+}
+.clicked_icon{
+    background-color: hsl(217, 19%, 35%)
+}
+
+/* --- SHARE_MENU STARTS --- */
+.share_menu{
+    flex-flow: column;
+
+    position: absolute;
+    top: -5rem;
+
+    height: 0;
+    overflow: hidden;
+    /* transition: height ease-in 0.1s; */
+}
+.visible_menu{
+    height: 5rem;
+    overflow: visible;
+}
+
+#main{
+    padding: 0.4rem 2.3rem;
+    justify-content: space-between;
+    width: 90%;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(215, 22%, 59%);
+    border-radius: 0.5rem;
+    font-size: 13px;
+    letter-spacing: 0.3rem;
+}
+#triangle{
+    height: 0;
+    width: 0;
+    border: solid  0.7rem;
+    border-color: hsl(217, 19%, 35%) transparent transparent;
+}
+/* --- SHARE_MENU ENDS --- */
+
+svg path{
+    fill: hsl(217, 19%, 35%)
+}
+.clicked_arrow path{
+    fill: white
+}
+
+/* --- SHARE_ICON ENDS --- */
+/* --- PROFILE ENDS --- */
+/* --- CONTENT ENDS --- */
+
+@media (max-width: 768px) {
+    #card{
+        flex-flow: column;
+
+        position: relative;
+
+        min-width: 20rem;
+        max-width: 22rem;
+        width: 90%;
+        height: min-content;
+    }
+    #banner{
+        width: 100%;
+        object-position: top;
+        height: 14.5rem;
+        object-fit: cover;
+        border-radius: 00.5rem 0.5rem 0 0;
+    }
+    #content{
+        gap: 1rem;
+    }
+    h2{
+        font-size: 15px;
+    }
+    #desc{
+        font-size: 14px;
+    }
+    #avatar{
+        margin-right: 1rem
+    }
+    #indiv{
+        gap: 0;
+    }
+    .share_icon{
+        position: static;
+
+    }
+    .share_menu{
+        left: 0rem;
+    }
+    #triangle{
+        display: none;
+    }
+}

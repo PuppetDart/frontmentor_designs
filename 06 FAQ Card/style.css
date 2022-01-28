@@ -44,6 +44,8 @@ body{
     background-repeat: no-repeat;
     background-size: contain, fill;
 
+    box-shadow: 0 1.5rem 5rem -1rem hsl(256, 63%, 25%);
+
     transition: ease all .3s
 }
 
@@ -109,7 +111,7 @@ hr{
     border: solid hsl(240, 5%, 91%) 0.01px
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     body, #card{
         flex-flow: column;
         font-size: 14px;
@@ -131,6 +133,7 @@ hr{
         /* illust_box is replaced with illust-woman */
         content: url("images/illustration-woman-online-mobile.svg");
 
+        display: flex;
         position: absolute;
         top: -7rem;
         left: 3.5rem;
