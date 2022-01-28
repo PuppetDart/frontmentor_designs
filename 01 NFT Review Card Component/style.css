@@ -1,9 +1,14 @@
+@font-face {
+    font-family: outfit;
+    src: url(Outfit-VariableFont_wght.ttf);
+}
 body, #card, #metrics, #metrics div, #credits, #cardImg{
     display: flex
 }
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     justify-content: center;
+    
+    font-family: outfit;
     background: #0d1a2d;
 
     padding: 0 1em;
@@ -65,7 +70,7 @@ body, #cardImg, #metrics div, #credits{
     margin: 0.3em 0 0 0
 }
 #desc{
-    font-size: 1.2em;
+    font-size: 18px;
     margin: 0
 }
 #desc, #day, #credits{

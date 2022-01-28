@@ -1,6 +1,10 @@
 @font-face {
-    font-family: AgencyFB;
-    src: url(agencyFB.ttf)
+    font-family: BigShoulders;
+    src: url(BigShouldersDisplay-SemiBold.ttf);
+}
+@font-face {
+    font-family: LexendDeca;
+    src: url(LexendDeca-VariableFont_wght.ttf);
 }
 
 body, #card, .col{
@@ -10,9 +14,10 @@ body{
     justify-content: center;
     align-items: center;
     
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-family: LexendDeca;
     color: rgb(235, 235, 235);
 
+    background: hsla(0, 0%, 100%, 0.75);
     height: 100vh;
     margin: 0
 }
@@ -22,7 +27,7 @@ body{
     overflow: hidden;
 
     border-radius: 0.6em;
-    height: 28.5em;
+    height: fit-content;
     min-width: 50em;
     max-width: 70%;
 }
@@ -32,7 +37,7 @@ body{
     flex-flow: column;
     justify-content: start;
     align-items: start;
-    gap: 1em;
+    gap: 0.7em;
 
     width: 13em;
     padding: 3em
@@ -48,10 +53,13 @@ body{
 }
 
 .title{
-    font-family: AgencyFB;
+    font-family: BigShoulders;
+    font-size: 2.4rem;
     color: white
 }
-
+.desc{
+    font-size: 1.05rem;
+}
 .button{    
     background: white;
 

@@ -54,10 +54,10 @@ body, #card, #selected_plan, #plan_info, #content{
 }
 #content{
     flex-flow: column;
-    gap: 1.4em;
+    gap: 1.2em;
 
     text-align: center;
-    padding: 2em
+    padding: 2.6em 2em
 }
 h1{
     font-family: "M-Bold";
@@ -66,7 +66,7 @@ h1{
 }
 #desc{
     line-height: 1.7em;
-    margin-top: -1.5em;
+    margin: -1.5em 0 -0.6em;
     max-width: 20rem
 }
 #selected_plan{
@@ -87,7 +87,8 @@ h1{
     margin-left: -10%
 }
 a{
-    color: #382ae1
+    color: #382ae1;
+    transition: ease-in all 0.2s
 }
 a:hover{
     text-decoration: none;
@@ -100,21 +101,25 @@ span:first-child, #pay_button, #cancel_button, a{
 #pay_button{
     background: #382ae1;
     box-shadow: 0 1em 1em 0em #d8d5fc;
-    
+
     width: 100%;
     max-width: 20em;
     padding: 1em;
     border-radius: 1em;
+    margin: 0.5em 0;
 
-    color: white
+    color: white;
 }
 #pay_button:hover{
-    background: #766cf1;
-    cursor: pointer
+    background: #665be4;
 }
 #cancel_button:hover{
     color: #1b2948;
-    cursor: pointer
+}
+#cancel_button, #pay_button{
+    user-select: none;
+    cursor: pointer;
+    transition: ease-in all 0.2s;
 }
 #cancel_button, span:nth-child(2), #desc{
     color: #797e9a
