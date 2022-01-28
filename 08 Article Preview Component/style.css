@@ -2,10 +2,10 @@
     font-family: manrope;
     src: url(Manrope-VariableFont_wght.ttf)
 }
-body, #card, #content, .profile, .indiv, #details, .share_icon, .share_menu, #main{
+body, #card, #content, .profile, .indiv, #details, .share_icon, .share_menu, #social{
     display: flex
 }
-body, .profile, .share_icon, .share_menu, #main{
+body, .profile, .share_icon, .share_menu, #social{
     justify-content: center;
     align-items: center
 }
@@ -116,7 +116,7 @@ h2{
     overflow: visible
 }
 
-#main{
+#social{
     justify-content: space-between;
 
     border-radius: 0.5rem;
@@ -136,7 +136,7 @@ h2{
     border-color: hsl(217, 19%, 35%) transparent transparent
 }
 
-#main, #triangle{
+#social, #triangle{
     pointer-events: none /* To disable click */
 }
 /* --- SHARE_MENU ENDS --- */
@@ -216,7 +216,7 @@ svg path{
         bottom: 0;
         left: 0
     }
-    #main{
+    #social{
         justify-content: start;
         gap: 10%;
 
