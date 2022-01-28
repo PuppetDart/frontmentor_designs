@@ -1,11 +1,11 @@
 @font-face {
     font-family: manrope;
-    src: url(Manrope-VariableFont_wght.ttf);
+    src: url(Manrope-VariableFont_wght.ttf)
 }
-body, #card, #content, #profile, #indiv, #details, .share_icon, .share_menu, #main{
+body, #card, #content, .profile, .indiv, #details, .share_icon, .share_menu, #main{
     display: flex
 }
-body, #profile, .share_icon, .share_menu, #main{
+body, .profile, .share_icon, .share_menu, #main{
     justify-content: center;
     align-items: center
 }
@@ -14,22 +14,24 @@ body{
     height: 100vh;
 
     font-family: manrope;
-
     background: hsl(210, 46%, 95%)
 }
 #card{
+    position: relative;
+
     min-width: 48rem;
     width: 50%;
     height: 18rem;
 
     border-radius: 0.5rem;
-    background: white;
+    background: white
 }
 #banner{
-    width: 40%;
     object-fit: cover;
     object-position: left;
+
     border-radius: 0.5rem 0 0 0.5rem;
+    width: 40%
 }
 
 /* --- CONTENT STARTS --- */
@@ -37,32 +39,31 @@ body{
     flex-flow: column;    
     justify-content: space-between;
 
-    padding: 2.3rem 2.5rem;
+    padding: 2.3rem 2.5rem
 }
 h2{
     margin: 0;
-    color: hsl(217, 19%, 35%);
+
     font-size: 20px;
-    
-    letter-spacing: 0.07rem;
+    color: hsl(217, 19%, 35%);
+    letter-spacing: 0.07rem
 }
 #desc{
     font-size: 13px;
     color: hsl(214, 17%, 51%);
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.5rem
 }
 
 /* --- PROFILE STARTS --- */
-#profile{
+.profile{
     justify-content: space-between;
-    
-    height: 2.5rem;
+    height: 2.5rem
 }
 #avatar{
     height: 100%;
     border-radius: 50%
 }
-#indiv{
+.indiv{
     height: 100%;
     gap: 1rem
 }
@@ -72,21 +73,19 @@ h2{
     flex-flow: column;
     gap: 0.2rem;
     
-    font-size: 13px;
+    font-size: 13px
 }
 #name{
     color: hsl(217, 19%, 35%);
-    font-variation-settings: "wght" 700;
+    font-variation-settings: "wght" 700
 }
 #date{
-    color: hsl(214, 17%, 51%);
+    color: hsl(214, 17%, 51%)
 }
 /* --- DETAILS ENDS --- */
 
 /* --- SHARE_ICON STARTS --- */
 .share_icon{
-    position: relative;
-
     border-radius: 50%;
     padding: 0.5rem;
     height: 1rem;
@@ -94,6 +93,7 @@ h2{
     
     background-color: hsl(210, 46%, 95%);
     user-select: none;
+    cursor: pointer
 }
 .clicked_icon{
     background-color: hsl(217, 19%, 35%)
@@ -104,32 +104,40 @@ h2{
     flex-flow: column;
 
     position: absolute;
-    top: -5rem;
+    bottom: 4.7rem;
+    right: -2.7rem;
 
     height: 0;
-    overflow: hidden;
-    /* transition: height ease-in 0.1s; */
+
+    overflow: hidden
 }
 .visible_menu{
-    height: 5rem;
-    overflow: visible;
+    height: fit-content;
+    overflow: visible
 }
 
 #main{
-    padding: 0.4rem 2.3rem;
     justify-content: space-between;
-    width: 90%;
-    background-color: hsl(217, 19%, 35%);
-    color: hsl(215, 22%, 59%);
+
     border-radius: 0.5rem;
+    padding: 0.4rem 2.3rem;
+    width: 90%;
+
+    background-color: hsl(217, 19%, 35%);
+    
     font-size: 13px;
-    letter-spacing: 0.3rem;
+    color: hsl(215, 22%, 59%);
+    letter-spacing: 0.3rem
 }
 #triangle{
     height: 0;
     width: 0;
     border: solid  0.7rem;
-    border-color: hsl(217, 19%, 35%) transparent transparent;
+    border-color: hsl(217, 19%, 35%) transparent transparent
+}
+
+#main, #triangle{
+    pointer-events: none /* To disable click */
 }
 /* --- SHARE_MENU ENDS --- */
 
@@ -148,43 +156,75 @@ svg path{
     #card{
         flex-flow: column;
 
-        position: relative;
-
         min-width: 20rem;
         max-width: 22rem;
         width: 90%;
-        height: min-content;
+        height: fit-content
     }
     #banner{
         width: 100%;
-        object-position: top;
         height: 14.5rem;
-        object-fit: cover;
         border-radius: 00.5rem 0.5rem 0 0;
+
+        object-position: top;
+        object-fit: cover
     }
     #content{
         gap: 1rem;
+        padding: 0
     }
     h2{
         font-size: 15px;
+        padding: 2.3rem 2.5rem 0
     }
     #desc{
         font-size: 14px;
+        padding: 0 2.5rem
     }
-    #avatar{
-        margin-right: 1rem
-    }
-    #indiv{
+    .profile{
+        justify-content: space-around;
+        align-items: center;
         gap: 0;
+
+        padding: 0 2.5rem 1.5rem;
+
+        transition: ease-out all 0.1s
+    }
+    .change_state{
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 0.7rem 0rem;
+
+        background-color: hsl(217, 19%, 35%)
+    }
+    .indiv{
+        gap: -1rem
+    }
+    #details{
+        width: 8rem
+    }
+    .absent{
+        display: none
     }
     .share_icon{
-        position: static;
-
+        z-index: 1
+    }
+    .clicked_icon{
+        background-color: hsl(214, 17%, 51%)
     }
     .share_menu{
-        left: 0rem;
+        position: static;
+        bottom: 0;
+        left: 0
+    }
+    #main{
+        justify-content: start;
+        gap: 10%;
+
+        border-radius: 0 0 0.5rem 0.5rem;
+
+        background-color: transparent
     }
     #triangle{
-        display: none;
+        display: none
     }
 }
