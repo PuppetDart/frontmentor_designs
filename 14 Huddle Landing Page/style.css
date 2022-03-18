@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    background: url(images/bg-desktop.svg) no-repeat hsl(257, 40%, 49%);
+    background-size: cover;
+    
+    color: white;
+}
+
+#main{
+    margin: 3% 5%;
+}
+.companyLogo{
+    width: 15em;
+}
+.main__mid{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+
+    margin: 3em 0 0 0;
+}
+.main__banner{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 41em;
+}
+.main__banner img{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 44em;
+}
+.main__textContainer{
+    flex: 2;
+    margin: 1em 0 0 0;
+    min-width: 24em;
+}
+.main__title{
+    font-family: Poppins;
+    font-size: 2.5em
+}
+.main__subText{
+    font-family: "Open Sans";
+    font-size: 1.15em;
+}
+.main__registerButton{
+    margin: 0.5em 0;
+
+    color:hsl(257, 40%, 49%);
+    font-family: Poppins;
+    font-size: 1.12em;
+
+    padding: 1em 3.5em;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0.2em 1em -0.4em black;
+
+    transition: all ease-in 0.4s;
+}
+
+.main__registerButton:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+    cursor: pointer
+}
+
+.main__socials{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em
+}
+.main__socials div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.2em;
+    width: 2.2em;
+    border: 0.1em white solid;
+    border-radius: 50%;
+
+    color: white;
+    
+    transition: border ease-in 0.5s, color ease-in-out 0.2s;
+}
+.main__socials div:hover{
+    color: hsl(300, 69%, 71%);
+    border: 0.1em hsl(300, 69%, 71%) solid;
+    cursor: pointer;
+}
+.main__socials svg{
+    height: 55%;
+    width: auto
+}
+
+@media (max-width: 768px) {
+    body{
+        text-align: center;
+    }
+    #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+
+        margin: 10%;
+    }
+    header{
+        align-self: start;
+    }
+    .companyLogo{
+        width: 10em;
+    }
+    .main__mid{
+        flex-flow: column
+    }
+    .main__banner{
+        min-width: 20em;
+    }
+    .main__textContainer{
+        min-width: 22em;
+    }
+    .main__title{
+        font-family: Poppins;
+        font-size: 2em
+    }
+    .main__registerButton{
+        margin: 0.5em 0 5em;
+    }
+}

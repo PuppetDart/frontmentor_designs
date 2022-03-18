@@ -1,23 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;600;700&display=swap');
 body{
-    display: flex;
-    margin: 0;
-    padding: 5%;
-    font-size: 20px;
+    display: flex;    
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
+    margin: 0;
+    padding: 6%;
+
+    font-size: 20px;
     font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
 }
 .companyLogo{
     height: auto;
-    width: 4.5em;
+    width: 4.6em;
 }
 .title{
-    color: hsl(0, 0%, 59%);
-    font-size: 2.5em;
-    font-weight: 300;
     margin: 1em 0 0;
+
+    color: hsl(0, 0%, 59%);
+    font-size: 2.7em;
+    font-weight: 300;
 }
 .title span{
     color: black;
@@ -25,36 +29,74 @@ body{
 }
 
 .subText{
-    margin: 0.3em 0 2em;
-    font-size: 1em;
-    font-weight: 600;
+    margin: 0.8em 0 2em;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 .getMail{
-    display: flex;
+    display: grid;
+    grid-template-columns: 4.5fr 2fr;
     justify-content: center;
-    gap: 0.5em;
-    width: 50%;
-    margin: 0 0 4em 0
+    grid-column-gap: 2%;
+
+    height: 3em;
+    width: 58%;
+    margin: 0 0 4.1em 0
 }
 
 .emailInput{
-    padding: 1em 1.5em;
-    outline: none;
-    flex: 5;
-    color: hsl(0, 0%, 59%);
-    border: 0.1em solid hsl(0, 0%, 59%);
+    padding: 1em 1.8em;
+    min-width: 16em;
+    border: 0.05em solid hsl(0, 0%, 77%);
     border-radius: 5em;
+    outline: none;
+    
+    font-size: 1em;
+    color: hsl(0, 0%, 59%);
+
+    transition: all ease-in 0.4s;
+}
+.emailInput.invalidMail{
+    border: 0.05em solid hsl(354, 100%, 66%);
+}
+.emailInput::placeholder{
+    color: hsl(0, 0%, 77%);
+}
+
+.errorMsg{
+    margin: 1em 3em;
+
+    font-style: italic;
+    font-size: 0em;
+    color: white;
+    text-align: left;
+
+    transition: all ease-in 0.3s;
+}
+
+.errorMsg.visible{
+    font-size: 0.5em;
+    color:hsl(354, 100%, 66%);
 }
 
 .notifyButton{
     padding: 1em;
-    flex: 2;
+    min-width: 8em;
+    font-size: 1em;
+    color: white;
     border-radius: 5em;
     border: none;
-    color: white;
+
     background-color: hsl(223, 87%, 63%);
     box-shadow: 0 0.2em 0.5em 0 hsl(223, 100%, 88%);
+
+    transition: all ease-in 0.3s;
+}
+
+.notifyButton:hover{
+    cursor: pointer;
+    background-color: hsl(223, 70%, 78%);
 }
 
 .illustration{
@@ -64,63 +106,122 @@ body{
 
 .socials{
     display: flex;
-    justify-content: center;
-    height: 1em;
-    width: 2em;
+    justify-content: center;    
+    gap: 1em;
+
+    height: 1.5em;
+    width: 100%;
 }
+
+.socials div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.07em solid rgb(202, 202, 202);
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+
+    transition: all ease-in 0.2s;
+}
+.socials div:hover{
+    cursor: pointer;
+    background-color: hsl(223, 87%, 63%);
+}
+
+.socials div svg{
+    height: 60%;
+}
+.socials svg path{
+    fill: hsl(223, 87%, 63%);
+    transition: fill ease-in 0.5s;
+}
+
 footer{
-    margin: 1em 0 0 0;
+    margin: 2.5em 0 0 0;
     color:hsl(0, 0%, 59%);
     font-size: 0.7em;
 }
 
 @media (max-width:768px) {
     body{
-        padding: 22% 15% 5%;
-    }
-    .getMail{
-        display: flex;
-        justify-content: center;
-        gap: 0.5em;
-        width: 90%;
-        margin: 0 0 4em 0
+        padding: 22% 5% 10%;
     }
     .companyLogo{
         height: auto;
         width: 5.5em;
-    }
-    .title{
+    }  
+    .title{        
+        margin: 2em 0 0.6em;
+
         color: hsl(0, 0%, 59%);
         font-size: 2.1em;
         font-weight: 300;
-        margin: 2.3em 0 0.6em;
         text-align: center;
-    }
-    .title span{
-        color: black;
-        font-weight: 700;
     }
     .subText{
         font-size: 1.1em;
-        font-weight: 600;
+    }
+    .getMail{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-auto-rows: min-content;
+        grid-gap: 5%;
+
+        height: 9em;
+        width: 100%;
+        margin: 1.5em 0 6em 0
     }
     .emailInput{
-        padding: 1em 1.5em;
-        outline: none;
-        flex: 5;
-        color: hsl(0, 0%, 59%);
-        border: 0.1em solid hsl(0, 0%, 59%);
-        border-radius: 5em;
+        justify-self: center;
+
+        padding: 0 8%;
+        width: 95%;
+        height: 2.5em;
+        min-width: 10em;
+        border: 0.09em solid hsl(223, 100%, 88%);
+        box-sizing: border-box;
+
+        font-weight: 200;
+        font-size: 25px;
     }
-    
+    .emailInput.invalidMail{
+        border: 0.09em solid hsl(354, 100%, 66%);
+    }
+
     .notifyButton{
-        padding: 1em;
-        flex: 2;
-        border-radius: 5em;
-        border: none;
-        color: white;
-        background-color: hsl(223, 87%, 63%);
-        box-shadow: 0 0.2em 0.5em 0 hsl(223, 100%, 88%);
+        justify-self: center;
+
+        height: 2.5em;
+        padding: 0.1em;
+        width: 95%;
+        min-width: 10em;
+        
+        font-size: 25px;
+    }
+
+    .errorMsg{
+        grid-row: 2;
+
+        margin: 0.5em 0 1.5em 0;
+
+        text-align: center;
+        font-style: normal;
+    }
+    .errorMsg.visible{
+        font-size: 0.75em;
+    }
+
+    .illustration{
+        width: 100%;
+        margin: 0 0 10em 0;
+    }
+    .socials{
+        gap: 3%
+    }
+    .socials div{
+        height: 2em;
+        width: 2em;
     }
 }
-

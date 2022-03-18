@@ -17,7 +17,6 @@ body{
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
     margin: 0;
 
     font-family: poppins_med;
@@ -29,7 +28,7 @@ body{
 
 #main{
     align-items: center;
-    margin: 12%;
+    margin: 4% 12%;
     gap: 10%;
 }
 
@@ -185,8 +184,5 @@ body{
 @media (max-height: 42em) {
     body{
         height: auto;
-    }
-    #main{
-        margin: 5% 12%;
     }
 }

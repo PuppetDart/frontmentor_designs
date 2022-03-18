@@ -79,6 +79,13 @@ body{
     color: white;
     font-weight: 400;
     font-size: 1em;
+
+    transition: all ease-in 0.3s;
+}
+.two__signUpButton:hover{
+    cursor: pointer;
+    background-color: hsl(179, 48%, 57%);
+    color: hsl(0, 0%, 100%)
 }
 /* ------- TWO ------- */
 
