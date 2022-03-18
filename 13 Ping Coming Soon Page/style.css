@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+body{
+    display: flex;
+    margin: 0;
+    padding: 5%;
+    font-size: 20px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.companyLogo{
+    height: auto;
+    width: 4.5em;
+}
+.title{
+    color: hsl(0, 0%, 59%);
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 1em 0 0;
+}
+.title span{
+    color: black;
+    font-weight: 700;
+}
+
+.subText{
+    margin: 0.3em 0 2em;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.getMail{
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    width: 50%;
+    margin: 0 0 4em 0
+}
+
+.emailInput{
+    padding: 1em 1.5em;
+    outline: none;
+    flex: 5;
+    color: hsl(0, 0%, 59%);
+    border: 0.1em solid hsl(0, 0%, 59%);
+    border-radius: 5em;
+}
+
+.notifyButton{
+    padding: 1em;
+    flex: 2;
+    border-radius: 5em;
+    border: none;
+    color: white;
+    background-color: hsl(223, 87%, 63%);
+    box-shadow: 0 0.2em 0.5em 0 hsl(223, 100%, 88%);
+}
+
+.illustration{
+    width: 35em;
+    margin: 0 0 3.5em 0;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    height: 1em;
+    width: 2em;
+}
+footer{
+    margin: 1em 0 0 0;
+    color:hsl(0, 0%, 59%);
+    font-size: 0.7em;
+}
+
+@media (max-width:768px) {
+    body{
+        padding: 22% 15% 5%;
+    }
+    .getMail{
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+        width: 90%;
+        margin: 0 0 4em 0
+    }
+    .companyLogo{
+        height: auto;
+        width: 5.5em;
+    }
+    .title{
+        color: hsl(0, 0%, 59%);
+        font-size: 2.1em;
+        font-weight: 300;
+        margin: 2.3em 0 0.6em;
+        text-align: center;
+    }
+    .title span{
+        color: black;
+        font-weight: 700;
+    }
+    .subText{
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    .emailInput{
+        padding: 1em 1.5em;
+        outline: none;
+        flex: 5;
+        color: hsl(0, 0%, 59%);
+        border: 0.1em solid hsl(0, 0%, 59%);
+        border-radius: 5em;
+    }
+    
+    .notifyButton{
+        padding: 1em;
+        flex: 2;
+        border-radius: 5em;
+        border: none;
+        color: white;
+        background-color: hsl(223, 87%, 63%);
+        box-shadow: 0 0.2em 0.5em 0 hsl(223, 100%, 88%);
+    }
+}
+

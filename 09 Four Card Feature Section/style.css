@@ -1,0 +1,122 @@
+@font-face {
+    font-family: PBold;
+    src: url(Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: PMed;
+    src: url(Poppins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: PLight;
+    src: url(Poppins/Poppins-ExtraLight.ttf);
+}
+
+body{
+    padding: 5%;
+    font-family: PLight;
+}
+#section, #header, #main, .main__midCards{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.header__title{
+    font-size: 2em;
+    color: rgb(136, 136, 136);
+    text-align: center;
+    
+    margin: 0;
+}
+.header__titleBold{
+    font-size: 2em;
+    font-family: PBold;
+    text-align: center;
+
+    margin: 0;
+}
+.header__desc{
+    font-size: 1em;
+    text-align: center;
+    color: rgb(136, 136, 136);
+
+    margin: 2.5% 20% 6%;
+}
+.main__card{
+    flex-shrink: 0;
+
+    width: 340px;
+    height: 240px;
+    margin: 10px;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 27px -15px rgb(53, 53, 53);
+    overflow: hidden;
+}
+
+.main__cardBase{    
+    display: flex;
+    flex-flow: column;
+
+    padding: 2% 8%;
+}
+
+.main__highlight{
+    height: 3px;
+    width: 100%;
+}
+
+.green{
+    background-color: rgb(24, 226, 165);
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgb(255, 187, 0);
+}
+.blue{
+    background-color: rgb(73, 167, 255);
+}
+
+.main__title{
+    margin: 7% 0 3% 0;
+    font-size: 18px;
+}
+
+.main__desc{
+    margin: 0;
+
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+}
+
+.main__card img{
+    margin-top: 14%;
+    align-self: end;
+}
+
+#main{
+    flex-flow: row;
+}
+
+.main__midCards{
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    #main{
+        flex-flow: column;
+    }
+    body{
+        padding: 15% 5%;
+        transition: all ease-in 1s;
+    }
+    .header__title, .header__titleBold{
+        font-size: 1.7em;
+    }
+    .header__desc{
+        max-width: 90%;
+        min-width: 320px;
+    }
+    
+}

@@ -1,0 +1,127 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    height: 100vh;
+
+    background-color: hsl(204, 43%, 93%);
+    font-family: Karla
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 40em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0 1em -0.6em
+}
+
+/* ------- ONE ------- */
+.main__one{
+    grid-column: span 2;
+    padding: 2.5em 3em;
+    background-color: white
+}
+.one__title{
+    margin: 0 0 1em 0;
+    color: hsl(179, 62%, 43%);
+    font-size: 1.5em
+}
+.one__subTitle{
+    margin: 0 0 0.7em 0;
+    color: hsl(71, 73%, 54%);
+    font-size: 1.1em
+}
+.one__desc{
+    margin: 0;
+    line-height: 1.5em;
+    color: hsl(218, 22%, 67%)
+}
+/* ------- ONE ------- */
+
+/* ------- TWO ------- */
+.main__two{
+    padding: 2.5em;
+    background-color: hsl(179, 62%, 43%);
+    color: white
+}
+.two__title{
+    margin: 0 0 1em 0;
+    font-size: 1.1em
+}
+.two__price{
+    margin: 0 0 0.25em 0;
+    font-size: 2.1em;
+    font-weight: 700
+}
+.two__price span{
+    color: hsl(204, 43%, 93%);
+    font-weight: 300;
+    font-size: 0.5em
+}
+.two__subText{
+    font-weight: 300;
+    margin: 0 0 2em 0
+}
+.two__signUpButton{
+    width: 100%;
+    padding: 0.8em;
+    border: none;
+    border-radius: 0.3em;
+
+    box-shadow: 0 0 1em -0.5em black;
+    background-color: hsl(71, 73%, 54%);
+    
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+}
+/* ------- TWO ------- */
+
+/* ------- THR ------- */
+.main__three{
+    padding: 2em 2.5em;
+    background-color: hsl(179, 48%, 57%);
+    color: white
+}
+.three__title{
+    font-size: 1.1em
+}
+.three__list{
+    padding: 0;
+    list-style: none;
+    color:hsl(204, 43%, 93%);
+    font-size: 0.9em;
+}
+.three__list li{
+    line-height: 1.45em
+}
+/* ------- THR ------- */
+
+@media (max-width: 768px) {
+    body{
+        height: auto;
+        padding: 4em 1em
+    }
+    #main{
+        grid-template-columns: 1fr;
+
+        border-radius: 0.5em;
+        min-width: 20em;
+        width: 60%;
+    }
+    .main__one{
+        grid-column: span 1;
+        padding: 1.5em;
+    }
+    .main__two{
+        padding: 1.5em;
+    }
+    .main__three{
+        padding: 0.6em 1.5em;
+    }
+}
