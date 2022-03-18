@@ -49,6 +49,7 @@ body{
 .main__form{
     flex-flow: column;
     align-items: center;
+    justify-content: flex-start;
 
     text-align: center;
 }
@@ -178,5 +179,14 @@ body{
     .text__title{
         font-size: 1.8em;
         line-height: 1.2em;
+    }
+}
+
+@media (max-height: 42em) {
+    body{
+        height: auto;
+    }
+    #main{
+        margin: 5% 12%;
     }
 }
