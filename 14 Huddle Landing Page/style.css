@@ -25,16 +25,15 @@ body{
     margin: 3em 0 0 0;
 }
 .main__banner{
-    flex: 3;
+    flex: 3;    
     display: flex;
     justify-content: center;
 
-    width: 100%;
-    min-width: 41em;
+    min-width: 40em;
 }
-.main__banner img{
-    flex-shrink: 0;
-    width: 100%;
+.main__banner img{   
+    width: 100%; 
+    height: auto;
     max-width: 44em;
 }
 .main__textContainer{
