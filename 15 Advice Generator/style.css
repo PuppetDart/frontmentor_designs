@@ -13,19 +13,22 @@ body{
     background-color:  hsl(218, 23%, 16%);
 }
 
-#main{
+.main{
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    height: auto;
 
     border-radius: 1em;
-    width: min-content;
+    width: 40%;
+    min-width: 35em;
     background-color: hsl(217, 19%, 24%);
     padding: 3em 3.5em 1em;
+    box-shadow: 0 0 2em 0 hsla(0, 0%, 0%, 0.2);
 
-    transition: all ease-in 1s;
+    transition: height ease-in 0.2s;
 }
 
 .main__title{
@@ -51,13 +54,90 @@ body{
     position: relative;
     top: 3em;
     cursor: pointer;
+    box-shadow: 0 0 2em 0 hsla(0, 0%, 0%, 0.3);
     transition: all ease-out 0.3s;
+    
+    perspective: 450px;
 }
 
 .main__diceContainer:hover{
     box-shadow: 0 0 2em 0 hsl(150, 100%, 66%);
 }
+.container{
+    width: 40%;
+    height: 40%;
+    /* distance from the subject -perspective */
+    perspective: 450px;
+}
+.cube{
+    position: relative;
+    transform: translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform ease-out 0.5s;
+}
 
-.main__dice{
-    color: hsl(218, 23%, 16%)
+.main__diceContainer:hover .cube{
+    transform: rotateX(180deg) rotateY(60deg) rotateZ(-30deg);
+}
+
+.face{
+    background-color: black;
+    box-shadow: 0 0 0.4em 0 black;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all ease-in 0.4s;
+}
+.main__diceContainer:hover .face{
+    box-shadow: 0 0 0.05em 0 black;
+}
+.front{
+    transform: translateZ(13px);
+    background-image: url("dice_faces/six_face.png");
+}
+.back{
+    transform: translateZ(-13px);
+    background-image: url("dice_faces/three_face.png");
+}
+.left{
+    transform: translateX(-50%) rotateY(90deg);
+    background-image: url("dice_faces/two_face.png");
+
+}
+.right{
+    transform: translateX(50%) rotateY(90deg);
+    background-image: url("dice_faces/four_face.png");
+}
+.top{
+    transform: translateY(-50%) rotateX(90deg);
+    background-image: url("dice_faces/one_face.png");
+}
+.bottom{
+    transform: translateY(50%) rotateX(90deg);
+    background-image: url("dice_faces/five_face.png");
+    transition: all ease 1s;
+}
+
+@media (max-width: 768px) {
+    .main{
+        width: 60%;
+        min-width: 23em;
+    }
+    .divider{
+        content: url(images/pattern-divider-mobile.svg);
+    }
+    .main__diceContainer{
+        width: 5em;
+        height: 5em;
+    }
+    .front{
+        transform: translateZ(16px);
+    }
+    .back{
+        transform: translateZ(-16px);
+    }
 }
