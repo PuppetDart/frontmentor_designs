@@ -19,7 +19,7 @@ const rollDice=()=>{
     //     mainDiv_totalHeight=document.querySelector(".main__quote").clientHeight+11+56+16+64+48+28
     //     document.querySelector(".main").style.height=mainDiv_totalHeight+"px"
     //     console.log(mainDiv_totalHeight+"px")
-    // }, 200)
+    // }, 1000)
 }
 
 // let observer = new MutationObserver(mutations=>{
