@@ -5,14 +5,15 @@
 body, #card{
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     padding: 2rem;
     margin: 0;
+    
 }
 body{
     flex-flow: column;
     gap: 1em;
-
+    box-sizing: border-box;
     align-items: center;
     background-image: url("11 Sign Up form/images/bg-intro-desktop.png"), linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
     background-size: contain;

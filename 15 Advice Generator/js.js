@@ -1,6 +1,6 @@
 const apiCall = async ()=>{
-    const response=fetch("https://api.adviceslip.com/advice")
-    const data=(await response).json()
+    const response= await fetch("https://api.adviceslip.com/advice");
+    const data=(response).json()
     return data
 }
 
