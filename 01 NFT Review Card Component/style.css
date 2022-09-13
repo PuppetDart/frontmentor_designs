@@ -104,6 +104,16 @@ body, #cardImg, #metrics div, #credits{
 
 @media (max-width: 768px) {
     body{
-        font-size: 14px
+        font-size: 14px;
+        height: auto;
+        padding: 2em;
+    }
+}
+
+@media (max-height: 35em) {
+    body{
+        font-size: 14px;
+        height: auto;
+        padding: 2em;
     }
 }

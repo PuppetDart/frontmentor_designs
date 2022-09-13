@@ -106,6 +106,7 @@ body{
 @media (max-width: 768px) {
     body{
         text-align: center;
+        height: auto;
     }
     #main{
         display: flex;
