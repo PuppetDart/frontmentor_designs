@@ -1,1 +1,1 @@
-node SS_update/app.js
+node app.js
