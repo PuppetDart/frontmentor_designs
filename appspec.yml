@@ -3,3 +3,10 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+hook:
+  BeforeInstall:
+   - location: install_dep.sh
+     timeout: 300
+  AfterInstall:
+   - location: updateSS.sh
+     timeout: 300
