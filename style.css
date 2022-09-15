@@ -7,33 +7,42 @@ html, body{
     min-height: 100%;
 }
 body{
+    margin: 0;
+    background-image: url("11 Sign Up form/images/bg-intro-desktop.png"), linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
+    background-size: contain;
+    color: rgba(255, 255, 255, 0.452);
+    padding: 2rem;
+    font-family: M;
+    transition: all ease-in 0.2s;
+}
+h2{
+    margin: 2px;
+}
+.cards{
     display: grid;
+    color: white;
     grid-template-columns:  repeat(auto-fit, minmax(380px, 1fr));
     grid-gap: 2em;
-    padding: 2rem;
+    padding: 2rem 0;
     margin: 0;
     gap: 1em;
     box-sizing: border-box;
     align-items: center;
-    background-image: url("11 Sign Up form/images/bg-intro-desktop.png"), linear-gradient(hsl(224, 42%, 13%), hsl(222, 24%, 8%));
-    background-size: contain;
     
-    font-family: M;
-    color: white;
 }
-#card{
+.card{
     display: flex;
     text-align: center;
     justify-content: center;
     padding: 2rem;
     margin: 0;
 }
-#card img{
+.card img{
     transition: 0.5s all ease-in-out;
-    filter: brightness(80%) opacity(60%);
+    filter: opacity(75%);
 }
-#card img:hover{
-    filter: brightness(100%) opacity(100%);
+.card img:hover{
+    filter: opacity(100%);
 }
 
 a{
@@ -43,11 +52,40 @@ a{
     padding: 0.5em 1em;
     border:hsl(224, 44%, 18%) solid 0.1em;
     border-radius: 1em;
-    transition: all ease-in 0.5s;
 }
 
 a:hover{
     color: rgb(255, 255, 255);
     border:rgb(255, 255, 255) solid 0.1em;
+}
+
+@media (max-width:768px) {
+    body{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .cards{
+        display: grid;
+        color: white;
+        grid-template-columns:  repeat(auto-fit, minmax(310px, 1fr));
+        grid-gap: 2em;
+        padding: 1rem 0;
+        margin: 0;
+        gap: 1em;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .card{
+        height: 180px;
+        padding: 1rem;
+    }
+    .card img{
+        height: 100%;
+        transition: 0.2s all ease-in-out;
+        filter: opacity(80%);
+    }
 }
 
