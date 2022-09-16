@@ -1,1 +1,2 @@
-npm install
+pwd
+sudo npm install
