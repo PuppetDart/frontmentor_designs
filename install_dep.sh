@@ -1,4 +1,11 @@
 pwd
-ls -l
+ls
 cd /var/www/html
+pwd
+ls
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts
+node -v
+npm -v
 sudo npm install
