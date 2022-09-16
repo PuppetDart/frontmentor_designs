@@ -4,13 +4,7 @@ files:
   - source: /
     destination: /var/www/html/
 hooks:
-  BeforeInstall:
-    - location: install_dep.sh
-      timeout: 3000
-      runas: ec2-user
   AfterInstall:
-    # - location: after_install.sh
-    #   timeout: 3000
-    -location: updateSS.sh
-      timeout: 3000
+    - location: after_install.sh
+    - location: updateSS.sh
       runas: ec2-user
