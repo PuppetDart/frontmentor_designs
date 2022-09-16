@@ -7,5 +7,3 @@ hooks:
   AfterInstall:
     - location: after_install.sh
       timeout: 100
-    # - location: updateSS.sh
-      runas: ec2-user
