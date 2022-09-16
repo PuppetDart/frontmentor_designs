@@ -4,9 +4,9 @@ files:
   - source: /
     destination: /var/www/html/
 hooks:
+  BeforeInstall:
+    - location: install_dep.sh
+      timeout: 3000
   AfterInstall:
-   - location: install_dep.sh
-     timeout: 300
-  ApplicationStart:
-   - location: updateSS.sh
-     timeout: 60000
+    - location: after_install.sh
+      timeout: 3000
