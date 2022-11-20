@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const async = require('async');
 
-const urlPrefix = "http://3.86.254.186/";
+const urlPrefix = "https://puppetdart.github.io/frontmentor_designs/";
 
 const links = {
     '01': '01%20NFT%20Review%20Card%20Component/nft_index.html',
